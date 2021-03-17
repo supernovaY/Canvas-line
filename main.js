@@ -1,6 +1,6 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
-var lineWidth = 5
+var lineWidth = 3
 
 autoSetCanvasSize(yyy)
 
@@ -120,7 +120,6 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchmove = function(aaa){
-      console.log('边摸边动')
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
 
@@ -138,7 +137,6 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchend = function(){
-      console.log('摸完了')
       using = false
     }
   }else{
